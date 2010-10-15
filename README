@@ -11,5 +11,6 @@ Type of questions
  - Ask user to walk 100 meters
  - Ask user to scan in barcode
 
+TODO: When the user is done answering questions the answers will be posted to a backend. 
 
 The application should work on as many devices as possible and have a look and feel that is as native as possible for each device. Use of OS checks and custom code should be kept at a minimum
