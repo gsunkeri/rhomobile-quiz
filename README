@@ -1,0 +1,9 @@
+Rhomobile Quiz
+=============
+A simple quiz application to test out capabilities in Rhomobile and create a native look and feel for several plattforms. 
+
+Type of questions
+ - Ask with text, multiple choice answer
+ - Ask with image, multiple choice answer
+ - Ask with sound, multiple choice answer
+ - Ask with video, multuple choice answer

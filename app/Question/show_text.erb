@@ -1,0 +1,50 @@
+<div class="pageTitle">
+  <h1><%= @question.title %></h1>
+</div>
+
+<div class="toolbar">
+     <div id="leftItem" class="leftItem backButton"><%= link_to "Tilbake", :action => :index %></div>
+</div>
+
+<div class="content">
+     <form method="POST" action="<%= url_for :action => :update %>">
+            <input type="hidden" name="id" value="<%= @question.object %>"/>
+
+            <h1 class="groupTitle"><%= @question.q %></h1>
+             <ul>
+               <li>
+                   <label for="question[answer]">Ørn</label>
+                   <% if @question.answer == "orn" %> 
+                     <input type="checkbox" name="question[answer]" checked="checked" value="orn"/>
+               	   <% else %>
+               		 <input type="checkbox" name="question[answer]" value="orn"/>
+               	   <% end %>
+               </li>
+               <li>
+                   <label for="question[answer]">Fossekall</label>
+                   <% if @question.answer == "fossekall" %> 
+                     <input type="checkbox" name="question[answer]" checked="checked" value="fossekall"/>
+               	   <% else %>
+               		 <input type="checkbox" name="question[answer]" value="fossekall"/>
+               	   <% end %>
+               </li>
+               <li>
+                   <label for="question[answer]">Blåmeis</label>
+                    <% if @question.answer == "blaameis" %> 
+                     <input type="checkbox" name="question[answer]" checked="checked" value="blaameis"/>
+               	   <% else %>
+               		 <input type="checkbox" name="question[answer]" value="blaameis"/>
+               	   <% end %>
+               </li>
+               <li>
+                   <label for="question[answer]">Måke</label>
+                    <% if @question.answer == "maake" %> 
+                     <input type="checkbox" name="question[answer]" checked="checked" value="maake"/>
+               	   <% else %>
+               		 <input type="checkbox" name="question[answer]" value="maake"/>
+               	   <% end %>
+               </li>
+           </ul>
+           <input type="submit" class="standardButton" value="Svar" />
+    </form>
+</div>
