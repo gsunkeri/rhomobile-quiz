@@ -13,14 +13,14 @@ class AppApplication < Rho::RhoApplication
     @questions = Question.find(:all)
 
     if @questions.size == 0
-      Question.new({'title'=>'Tekst', 'q'=>'Which bird is the national bird of norway??', 'path'=>'text', 'answer'=>''}).save
-      Question.new({'title'=>'Lyd', 'q'=>'Which bird did you hear??', 'path'=>'sound', 'answer'=>''}).save
-      Question.new({'title'=>'Bilde', 'q'=>'Which bird is this?', 'path'=>'image', 'answer'=>''}).save
+      Question.new({'title'=>'Text', 'q'=>'Which bird is the national bird of norway??', 'path'=>'text', 'answer'=>''}).save
+      Question.new({'title'=>'Sound', 'q'=>'Which bird did you hear??', 'path'=>'sound', 'answer'=>''}).save
+      Question.new({'title'=>'Image', 'q'=>'Which bird is this?', 'path'=>'image', 'answer'=>''}).save
       Question.new({'title'=>'Video', 'q'=>'Which bird is this?', 'path'=>'video', 'answer'=>''}).save
-      Question.new({'title'=>'Bevegelse', 'q'=>'Turn your cellphone sideways', 'path'=>'accelometer', 'answer'=>''}).save
-      Question.new({'title'=>'Kompass', 'q'=>'Turn your cellphone towards north', 'path'=>'compass', 'answer'=>''}).save
-      Question.new({'title'=>'Lokasjon', 'q'=>'Walk 100 meters from your initial possition', 'path'=>'location', 'answer'=>''}).save
-      Question.new({'title'=>'Strekkode', 'q'=>'Register barcode', 'path'=>'barcode', 'answer'=>''}).save
+      Question.new({'title'=>'Accelometer', 'q'=>'Turn your cellphone sideways', 'path'=>'accelometer', 'answer'=>''}).save
+      Question.new({'title'=>'Compass', 'q'=>'Turn your cellphone towards north', 'path'=>'compass', 'answer'=>''}).save
+      Question.new({'title'=>'Location', 'q'=>'Walk 100 meters from your initial possition', 'path'=>'location', 'answer'=>''}).save
+      Question.new({'title'=>'Barcode', 'q'=>'Register barcode', 'path'=>'barcode', 'answer'=>''}).save
       @questions = Question.find(:all)
     end
     
