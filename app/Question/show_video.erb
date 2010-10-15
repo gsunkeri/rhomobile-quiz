@@ -3,50 +3,51 @@
 </div>
 
 <div class="toolbar">
-     <div id="leftItem" class="leftItem backButton"><%= link_to "Tilbake", :action => :index %></div>
+  <div id="leftItem" class="leftItem backButton"><%= link_to "Back", :action => :index %></div>
 </div>
 
 <div class="content">
-    <form method="POST" action="<%= url_for :action => :update %>">
-           <input type="hidden" name="id" value="<%= @question.object %>"/>
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @question.object %>"/>
 
-           <h1 class="groupTitle"><%= @question.q %></h1>
-               <a href="/public/fossekall.mp4">Play mp4 online video</a><br/>
-        
-          <ul>
-               <li>
-                   <label for="question[answer]">Ørn</label>
-                   <% if @question.answer == "orn" %> 
-                     <input type="checkbox" name="question[answer]" checked="checked" value="orn"/>
-               	   <% else %>
-               		 <input type="checkbox" name="question[answer]" value="orn"/>
-               	   <% end %>
-               </li>
-               <li>
-                   <label for="question[answer]">Fossekall</label>
-                   <% if @question.answer == "fossekall" %> 
-                     <input type="checkbox" name="question[answer]" checked="checked" value="fossekall"/>
-               	   <% else %>
-               		 <input type="checkbox" name="question[answer]" value="fossekall"/>
-               	   <% end %>
-               </li>
-               <li>
-                   <label for="question[answer]">Blåmeis</label>
-                    <% if @question.answer == "blaameis" %> 
-                     <input type="checkbox" name="question[answer]" checked="checked" value="blaameis"/>
-               	   <% else %>
-               		 <input type="checkbox" name="question[answer]" value="blaameis"/>
-               	   <% end %>
-               </li>
-               <li>
-                   <label for="question[answer]">Måke</label>
-                    <% if @question.answer == "maake" %> 
-                     <input type="checkbox" name="question[answer]" checked="checked" value="maake"/>
-               	   <% else %>
-               		 <input type="checkbox" name="question[answer]" value="maake"/>
-               	   <% end %>
-               </li>
-           </ul>
-           <input type="submit" class="standardButton" value="Svar" />
-   </form>
+    <h1 class="groupTitle"><%= @question.q %></h1>
+    <a href="/public/white-throated-dipper.mp4">Play local mp4 video</a><br/>
+    <a href="http://ibc.lynxeds.com/files/videos/transcoded/39892.mp4">Play remote  mp4 video</a><br/>
+    <ul>
+      <li>
+      <label for="question[answer]">Eagle</label>
+      <% if @question.answer == "eagle" %> 
+        <input type="checkbox" name="question[answer]" checked="checked" value="eagle"/>
+      <% else %>
+        <input type="checkbox" name="question[answer]" value="eagle"/>
+      <% end %>
+      </li>
+      <li>
+      <label for="question[answer]">White-throated Dipper</label>
+      <% if @question.answer == "white-throated-dipper" %> 
+        <input type="checkbox" name="question[answer]" checked="checked" value="white-throated-dipper"/>
+      <% else %>
+        <input type="checkbox" name="question[answer]" value="white-throated-dipper"/>
+      <% end %>
+      </li>
+      <li>
+      <label for="question[answer]">Blue Tit</label>
+      <% if @question.answer == "blue-tit" %> 
+        <input type="checkbox" name="question[answer]" checked="checked" value="blue-tit"/>
+      <% else %>
+        <input type="checkbox" name="question[answer]" value="blue-tit"/>
+      <% end %>
+      </li>
+      <li>
+      <label for="question[answer]">Seagull</label>
+      <% if @question.answer == "seagull" %> 
+        <input type="checkbox" name="question[answer]" checked="checked" value="seagull"/>
+      <% else %>
+        <input type="checkbox" name="question[answer]" value="seagull"/>
+      <% end %>
+      </li>
+    </ul>
+
+    <input type="submit" class="standardButton" value="Svar" />
+  </form>
 </div>

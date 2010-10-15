@@ -32,7 +32,6 @@ class QuestionController < Rho::RhoController
   end
 
   def stop_sound
-    @flash = "Stoppet spille lyd"
     Rho::RingtoneManager.stop
     render :action => 'show_sound'
   end
