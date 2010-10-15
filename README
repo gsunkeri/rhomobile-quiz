@@ -7,3 +7,9 @@ Type of questions
  - Ask with image, multiple choice answer
  - Ask with sound, multiple choice answer
  - Ask with video, multuple choice answer
+ - Ask user to rotate device
+ - Ask user to walk 100 meters
+ - Ask user to scan in barcode
+
+
+The application should work on as many devices as possible and have a look and feel that is as native as possible for each device. Use of OS checks and custom code should be kept at a minimum
