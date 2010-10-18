@@ -9,7 +9,7 @@ class QuestionController < Rho::RhoController
     @questions = Question.find(:all)
     app_info(@questions)
     System::set_screen_rotation_notification(url_for(:action => :emptyScreenRotateCallback), "")
-    
+
     render
   end
 
@@ -26,6 +26,7 @@ class QuestionController < Rho::RhoController
       redirect :action => :index
     end
   end
+
 
   def play_sound
     Alert.play_file '/public/seagull.mp3', 'audio/mpeg'
@@ -50,7 +51,7 @@ class QuestionController < Rho::RhoController
 
   def emptyScreenRotateCallback
 
-  
+
   end
 
   def on_popup_close

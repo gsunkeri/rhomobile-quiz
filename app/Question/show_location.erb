@@ -1,0 +1,22 @@
+<div class="pageTitle">
+    <h1><%= @question.title %></h1>
+</div>
+
+<div class="toolbar">
+    <div id="leftItem" class="leftItem backButton"><%= link_to "Back", :action => :index %></div>
+</div>
+
+<div class="content">
+
+    <h1 class="groupTitle"><%= @question.q %></h1>
+
+    <p>
+        Latitude: <%= GeoLocation.latitude.to_s %><br/>
+        Longitude: <%= GeoLocation.longitude.to_s %>
+    </p>
+
+    <p>Geo-location information available asynchronously,
+        so you may have to <a href="<%= url_for :action => :show, :id => @question.object %>" target="_self">refresh page</a>
+        to see results of ruby calls</p>
+
+</div>
