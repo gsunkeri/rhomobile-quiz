@@ -8,6 +8,7 @@ class QuestionController < Rho::RhoController
   def index
     @questions = Question.find(:all)
     app_info(@questions)
+    #how can we unregister the previous callback? Hacking here, just setting a empty callback
     System::set_screen_rotation_notification(url_for(:action => :emptyScreenRotateCallback), "")
 
     render
@@ -18,7 +19,7 @@ class QuestionController < Rho::RhoController
     @question = Question.find(@params['id'])
     if @question
       app_info(@question)
-      if @question.path == 'accelerometer' && @question.answer != "true"
+      if @question.path == 'rotation' && @question.answer != "true"
         System::set_screen_rotation_notification(url_for(:action => :screenRotateCallback, :query => {:id => @question.object}), "")
       end
       render :action => 'show_' + @question.path
@@ -30,7 +31,10 @@ class QuestionController < Rho::RhoController
 
   def play_sound
     Alert.play_file '/public/seagull.mp3', 'audio/mpeg'
-    render :action => 'show_sound'
+
+    #can we stop it from rendering anything here? We just want it to stay on the same page
+    @question = Question.find(@params['id'])
+    render :action => 'show_sound'  
   end
 
   def update

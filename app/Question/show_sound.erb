@@ -11,7 +11,7 @@
 		<input type="hidden" name="id" value="<%= @question.object %>"/>
 
 		<h1 class="groupTitle"><%= @question.q %></h1>
-		<%= link_to '[Play sound]', {:action => :play_sound } %><br/>
+		<%= link_to '[Play sound]', {:action => :play_sound, :id => @question.object} %><br/>
 		<ul>
 			<li>
 			<label for="question[answer]">Eagle</label>
