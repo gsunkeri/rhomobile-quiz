@@ -7,7 +7,7 @@
 </div>
 
 <div class="content">
-	<% if @question.answer != 'fail' && @question.answer != ''%>
+	<% if @question.answer == 'true'%>
 		You have already rotated your device to answer this question
 	<% else %>
 
@@ -19,9 +19,9 @@
 			<li>
 			<label for="question[answer]">I am not able to turn my device</label>
 			<% if @question.answer == "fail" %> 
-				<input type="checkbox" name="question[answer]" checked="checked" value="fail"/>
+				<input type="checkbox" name="question[answer]" checked="checked" value="false"/>
 			<% else %>
-				<input type="checkbox" name="question[answer]" value="fail"/>
+				<input type="checkbox" name="question[answer]" value="false"/>
 			<% end %>
 			</li>
 		</ul>
