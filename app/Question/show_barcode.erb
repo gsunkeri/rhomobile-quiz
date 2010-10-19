@@ -1,0 +1,28 @@
+<div class="pageTitle">
+  <h1><%= @question.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div id="leftItem" class="leftItem backButton"><%= link_to "Back", :action => :index %></div>
+</div>
+
+<div class="content">
+  <h1 class="groupTitle"><%= @question.q %></h1>
+
+  <% if @question.answer != "" %>
+    <%= "Barcode found: " + @question.answer %> 
+
+  <% end %>
+
+  <% if @question.answer == "" %>
+
+    <% if @params['try'] == "true" %>
+      No barcode found 
+    <% end %>
+    <ul>
+      <li>
+      <a href="<%= url_for :action => :scanBarcode, :id => @question.object %>"> <span class="title">Take picture</span><span class="disclosure_indicator"></span> </a>
+      </li>
+    </ul>
+  <% end %>
+</div>
