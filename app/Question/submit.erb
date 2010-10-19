@@ -1,0 +1,27 @@
+<div class="pageTitle">
+  <h1>Submit answers</h1>
+</div>
+
+<div class="toolbar">
+</div>
+
+
+<div class="content">
+  ANSWERS: <br />
+    <% @questions.each do |question| %>
+      <%= question.q + " => " + question.answer + "<br />"%>
+   <% end %>
+
+
+   System <br />
+   Plattform: <%= System.get_property 'platform' %> <br />
+   ScreenW <%= System.get_property 'screen_width' %><br />
+   ScreenH <%= System.get_property 'screen_height' %><br />
+   Pnr <%= System.get_property 'phone_number' %><br />
+   DeviceId <%= System.get_property 'device_id' %><br />
+   Name <%= System.get_property 'device_name' %><br />
+   osversion <%= System.get_property 'os_version' %><br />
+
+
+
+</div>

@@ -88,5 +88,9 @@ class QuestionController < Rho::RhoController
     WebView.navigate( url_for :action => :show, :id => @params['id'], :query => { :try => "true" })
   end
 
+  def submit
+    @questions = Question.find(:all)
+    render :action => :submit
+  end
 end
 
