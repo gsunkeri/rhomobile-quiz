@@ -16,7 +16,6 @@ class AppApplication < Rho::RhoApplication
       Question.new({'title'=>'Image', 'q'=>'Which bird is this?', 'path'=>'image', 'answer'=>''}).save
       Question.new({'title'=>'Video', 'q'=>'Which bird is this?', 'path'=>'video', 'answer'=>''}).save
       Question.new({'title'=>'ScreenRotation', 'q'=>'Turn your cellphone sideways', 'path'=>'rotation', 'answer'=>''}).save
-      Question.new({'title'=>'Compass', 'q'=>'Turn your cellphone towards north', 'path'=>'compass', 'answer'=>''}).save
       Question.new({'title'=>'Location', 'q'=>'Walk 100 meters from your initial possition', 'path'=>'location', 'answer'=>''}).save
       Question.new({'title'=>'Barcode', 'q'=>'Register barcode', 'path'=>'barcode', 'answer'=>''}).save
       @questions = Question.find(:all)
