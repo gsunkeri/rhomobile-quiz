@@ -3,14 +3,12 @@
 </div>
 
 <div class="toolbar">
-    <div id="leftItem" class="leftItem backButton"><%= link_to "Back", :action => :index %></div>
+  <div class="leftItem backButton">
+    <a href="<%= Rho::RhoConfig.start_path %>">Back</a>
+  </div>
 </div>
-
 <div class="content">
-
     <h1 class="groupTitle"><%= @question.q %></h1>
-
-
 
     <% if !GeoLocation.known_position? %>
         <ul>
@@ -40,7 +38,5 @@
                 </li>
             </ul>
         <% end %>
-
     <% end %>
-
 </div>
