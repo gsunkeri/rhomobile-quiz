@@ -1,30 +1,30 @@
 --- 
+name: rhomobile-quiz
 extensions: 
 - json
 - another-extension
 - gps
 - camera
-name: rhomobile-quiz
 capabilities: 
 - camera
 - gps
 bbver: 4.6
+sdk: /Library/Ruby/Gems/1.8/gems/rhodes-2.2.1
 android: 
   extensions: 
   - barcode
-sdk: /Library/Ruby/Gems/1.8/gems/rhodes-2.2.0
-applog: rholog.txt
 build: debug
-wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+applog: rholog.txt
 version: 1.0
+wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+sdkversion: 2.2.1
 vendor: rhomobile
-sdkversion: 2.2.0
 iphone: 
+  provisionprofile: 
   extensions: 
   - barcode
-  provisionprofile: 
-  sdk: iphonesimulator4.0
-  entitlements: 
+  sdk: iphonesimulator4.1
   codesignidentity: 
+  entitlements: 
   configuration: Debug
-  emulator: 4.0.1
+  emulator: 4.1
