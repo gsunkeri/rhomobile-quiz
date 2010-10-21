@@ -1,26 +1,26 @@
 <div class="pageTitle">
-  <h1>Rhomobile Quiz</h1>
+    <h1>Rhomobile Quiz</h1>
 </div>
 
 <div class="toolbar">
-  <div id="rightItem" class="rightItem blueButton"><%= link_to "Submit", :action => :submit %></div>
+    <div id="rightItem" class="rightItem blueButton"><%= link_to "Submit", :action => :submit %></div>
 </div>
 
 <div class="content">
-  <ul>
-    <% @questions.each do |question| %>
+    <ul>
+        <% @questions.each do |question|
 
-      <li>
-      <a href="<%= url_for :action => :show, :id => question.object %>">
-        <% if question.answer != "" %>
-          <span class="title" style="font-style: italic">
-          <% else %>
-            <span class="title"> 
-          <% end %>
-            <%= question.title %></span><span class="disclosure_indicator"></span>
-        </a>
-        </li>
+            title = question.title
+            if question.answer != ""
+                title = "* " + title
+            end
+        %>
+            <li>
+                <a href="<%= url_for :action => :show, :id => question.object %>">
+                    <span class="title"><%= title %></span> <span class="disclosure_indicator"></span>
+                </a>
+            </li>
 
-      <% end %>
+        <% end %>
     </ul>
-  </div>
+</div>
